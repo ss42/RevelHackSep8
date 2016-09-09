@@ -86,11 +86,12 @@ class ChooseFuelViewController: UIViewController {
     @IBAction func beginFueling(sender: AnyObject) {
         
         // segue to wait screen
+        performSegue(Constants.Segues.choosePaymentPage)
         
     }
     
     func clearColors(){
-        openTabPressed.backgroundColor = UIColor.clearColor()
+        //openTabPressed.backgroundColor = UIColor.clearColor()
         twentyPressed.backgroundColor = UIColor.clearColor()
         tenPressed.backgroundColor = UIColor.clearColor()
         thirtyPressed.backgroundColor = UIColor.clearColor()

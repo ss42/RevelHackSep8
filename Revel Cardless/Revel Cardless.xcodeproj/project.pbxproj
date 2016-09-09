@@ -27,6 +27,9 @@
 		92347C5C1D82B63E0053CB39 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C5B1D82B63E0053CB39 /* CustomView.swift */; };
 		92347C5E1D82D82A0053CB39 /* JSONretrieveInventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C5D1D82D82A0053CB39 /* JSONretrieveInventory.swift */; };
 		92347C601D82D8500053CB39 /*  JSONcustomerHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C5F1D82D8500053CB39 /*  JSONcustomerHistory.swift */; };
+		92347C621D8318070053CB39 /* ChoosePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C611D8318070053CB39 /* ChoosePaymentViewController.swift */; };
+		92347C641D831D180053CB39 /* AdvancePayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C631D831D180053CB39 /* AdvancePayViewController.swift */; };
+		92347C661D831DBD0053CB39 /* ChoosePaymentForAdvanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C651D831DBD0053CB39 /* ChoosePaymentForAdvanceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		92347C5B1D82B63E0053CB39 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		92347C5D1D82D82A0053CB39 /* JSONretrieveInventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONretrieveInventory.swift; path = ../JSONretrieveInventory.swift; sourceTree = "<group>"; };
 		92347C5F1D82D8500053CB39 /*  JSONcustomerHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " JSONcustomerHistory.swift"; sourceTree = "<group>"; };
+		92347C611D8318070053CB39 /* ChoosePaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePaymentViewController.swift; sourceTree = "<group>"; };
+		92347C631D831D180053CB39 /* AdvancePayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancePayViewController.swift; sourceTree = "<group>"; };
+		92347C651D831DBD0053CB39 /* ChoosePaymentForAdvanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePaymentForAdvanceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				92347C221D82A0DA0053CB39 /* Main.storyboard */,
-				92347C5B1D82B63E0053CB39 /* CustomView.swift */,
 				92347C1E1D82A0DA0053CB39 /* AppDelegate.swift */,
 				92347C401D82A1920053CB39 /* BeginFuelingViewController.swift */,
+				92347C611D8318070053CB39 /* ChoosePaymentViewController.swift */,
 				92347C411D82A1920053CB39 /* ChooseFuelViewController.swift */,
 				92347C4C1D82A19A0053CB39 /* MenuViewController.swift */,
 				92347C4D1D82A19A0053CB39 /* SelectPumpViewController.swift */,
@@ -96,11 +102,10 @@
 				92347C431D82A1920053CB39 /* DistanceToStoreViewController.swift */,
 				92347C441D82A1920053CB39 /* GasStationsTableViewCell.swift */,
 				92347C451D82A1920053CB39 /* GetDistance.swift */,
+				92347C671D8327A60053CB39 /* AdvancePay */,
 				92347C581D82B0B80053CB39 /* JSON */,
 				92347C561D82B0B00053CB39 /* CalculatePromotion.swift */,
-				92347C251D82A0DB0053CB39 /* Assets.xcassets */,
-				92347C271D82A0DB0053CB39 /* LaunchScreen.storyboard */,
-				92347C2A1D82A0DB0053CB39 /* Info.plist */,
+				92347C681D8327D40053CB39 /* Supporting Files */,
 			);
 			path = "Revel Cardless";
 			sourceTree = "<group>";
@@ -115,6 +120,26 @@
 				92347C541D82B0960053CB39 /* JSONsendTransaction.swift */,
 			);
 			name = JSON;
+			sourceTree = "<group>";
+		};
+		92347C671D8327A60053CB39 /* AdvancePay */ = {
+			isa = PBXGroup;
+			children = (
+				92347C631D831D180053CB39 /* AdvancePayViewController.swift */,
+				92347C651D831DBD0053CB39 /* ChoosePaymentForAdvanceViewController.swift */,
+			);
+			name = AdvancePay;
+			sourceTree = "<group>";
+		};
+		92347C681D8327D40053CB39 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				92347C251D82A0DB0053CB39 /* Assets.xcassets */,
+				92347C5B1D82B63E0053CB39 /* CustomView.swift */,
+				92347C271D82A0DB0053CB39 /* LaunchScreen.storyboard */,
+				92347C2A1D82A0DB0053CB39 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,9 +221,12 @@
 				92347C1F1D82A0DA0053CB39 /* AppDelegate.swift in Sources */,
 				92347C5C1D82B63E0053CB39 /* CustomView.swift in Sources */,
 				92347C4A1D82A1920053CB39 /* GasStationsTableViewCell.swift in Sources */,
+				92347C621D8318070053CB39 /* ChoosePaymentViewController.swift in Sources */,
 				92347C4F1D82A19A0053CB39 /* SelectPumpViewController.swift in Sources */,
 				92347C601D82D8500053CB39 /*  JSONcustomerHistory.swift in Sources */,
+				92347C641D831D180053CB39 /* AdvancePayViewController.swift in Sources */,
 				92347C551D82B0960053CB39 /* JSONsendTransaction.swift in Sources */,
+				92347C661D831DBD0053CB39 /* ChoosePaymentForAdvanceViewController.swift in Sources */,
 				92347C4B1D82A1920053CB39 /* GetDistance.swift in Sources */,
 				92347C481D82A1920053CB39 /* Constants.swift in Sources */,
 				92347C4E1D82A19A0053CB39 /* MenuViewController.swift in Sources */,

@@ -16,6 +16,10 @@ struct Constants{
         static let pumpPage = "pumpPage"
         static let chooseFuel = "chooseFuelView"
         static let beginFuelingPage = "beginFuelingPage"
+        static let choosePaymentPage = "choosePaymentView"
+        static let advancePayPage = "advancePayPage"
+        static let advancePaymentPage = "advancePayPayment"
+        
         
         
        
