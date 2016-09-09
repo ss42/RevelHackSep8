@@ -72,7 +72,7 @@ class JSONinventoryParser {
         
         for item in newobject {
             if item["id_category"] as! Int == 95 {
-                let tempPromote = Promotion_product(product_name: String(item["name"]!), product_category: item["id_category"] as! Int, product_price: item["cost"] as! Double, product_discount: 0.15)
+                let tempPromote = Promotion_product(product_name: String(item["name"]!), product_category: item["id_category"] as! Int, product_price: item["price"] as! Double, product_discount: 0.15)
                 inventorylist.append(tempPromote)
             }
         }
