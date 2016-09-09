@@ -13,18 +13,23 @@ class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    var testPump = [String]()
+    var testPump = [Pump]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(testPump.count)
+        
+        
+        
+        dispatch_async(dispatch_get_main_queue(),{
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            self.testPump = appDelegate.pumpList
+            print("dispatch")
+            
+        })
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        
-        //let getJSON = JSONpumpParser()
-        //getJSON.runJSONparser()
-        testPump = JSONpumpParser.pumpArray
 
         // Do any additional setup after loading the view.
     }
@@ -48,7 +53,7 @@ class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICo
         
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return testPump.count
+        return 10
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         performSegue(Constants.Segues.chooseFuel)
@@ -57,7 +62,20 @@ class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pumpCell", forIndexPath: indexPath) as! PumpCollectionViewCell
-        cell.pumpText.text = testPump[indexPath.row]
+        //print(testPump[0].pump_name)
+        let pump = testPump[indexPath.row] as Pump
+        
+        
+        cell.pumpText.text = pump.pump_name
+        print(pump.pump_name)
+        print("cell")
+        
+        if (pump.pump_is_occupied == true){
+            cell.pumpText.backgroundColor = UIColor.redColor()
+            
+        }
+        print(pump.pump_is_occupied)
+        
         return cell
     }
 

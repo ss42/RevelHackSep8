@@ -13,6 +13,8 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
     
     var distanceAway = 0
     
+    var pumpList = [Pump]()
+    
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -95,6 +97,9 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
         cell.price.text = "$2.61"
         return cell
     }
+    
+    
+
     
 
 

@@ -36,7 +36,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="505" height="55"/>
                                                             <color key="backgroundColor" red="0.098039215686274508" green="0.55686274509803924" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8f-HN-yyF">
@@ -134,14 +134,14 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="VJs-EG-BBM"/>
                                         </constraints>
-                                        <state key="normal" title="Store"/>
+                                        <state key="normal" title="Pick something from the Store"/>
                                         <connections>
                                             <action selector="storePressed:" destination="UNH-Bw-rLS" eventType="touchUpInside" id="KcT-ud-G7t"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYB-JF-9AZ">
                                         <rect key="frame" x="0.0" y="65" width="500" height="40"/>
-                                        <state key="normal" title="Gas"/>
+                                        <state key="normal" title="Fill and Go"/>
                                         <connections>
                                             <action selector="gasPressed:" destination="UNH-Bw-rLS" eventType="touchUpInside" id="ivr-sK-Dih"/>
                                         </connections>
@@ -160,8 +160,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ee1-jl-UAt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.52156862749999999" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-zZ-VR7">
