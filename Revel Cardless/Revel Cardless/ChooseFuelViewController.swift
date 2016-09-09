@@ -88,6 +88,7 @@ class ChooseFuelViewController: UIViewController {
         // segue to wait screen
         performSegue(Constants.Segues.choosePaymentPage)
         
+        
     }
     
     func clearColors(){
