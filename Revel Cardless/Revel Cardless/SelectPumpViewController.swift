@@ -35,7 +35,7 @@ class SelectPumpViewController: UIViewController {
         
     }
     @IBAction func pumpOnePressed(sender: AnyObject) {
-        
+        performSegue(Constants.Segues.chooseFuel)
         
     }
     @IBAction func pumpTwoPressed(sender: AnyObject) {

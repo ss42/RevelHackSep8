@@ -193,114 +193,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I4A-8u-aIB">
-                                <rect key="frame" x="23" y="102" width="374" height="475"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Own-eJ-E2P">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="111"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rv-mO-fNo">
-                                                <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="2Rv-mO-fNo" secondAttribute="height" multiplier="1:1" id="IIi-cQ-LuW"/>
-                                                </constraints>
-                                                <state key="normal" title="Pump 1"/>
-                                                <connections>
-                                                    <action selector="pumpOnePressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="tC8-Kk-fTe"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xj-aM-U2p">
-                                                <rect key="frame" x="131" y="0.0" width="112" height="111"/>
-                                                <state key="normal" title="Pump 2"/>
-                                                <connections>
-                                                    <action selector="pumpTwoPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="jV4-fe-zmN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-bb-gc1">
-                                                <rect key="frame" x="263" y="0.0" width="111" height="111"/>
-                                                <state key="normal" title="Pump 3"/>
-                                                <connections>
-                                                    <action selector="pumpThreePressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="geb-aL-XtR"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="wg1-6z-Omd">
-                                        <rect key="frame" x="0.0" y="121" width="374" height="112"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jiw-I9-Cmw">
-                                                <rect key="frame" x="0.0" y="0.0" width="111" height="112"/>
-                                                <state key="normal" title="Pump 4"/>
-                                                <connections>
-                                                    <action selector="pumpFourPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="Ldh-hm-G0F"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvE-VJ-b4c">
-                                                <rect key="frame" x="131" y="0.0" width="112" height="112"/>
-                                                <state key="normal" title="Pump 5"/>
-                                                <connections>
-                                                    <action selector="pumpFivePressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="QOA-o7-kil"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyT-vu-Fh0">
-                                                <rect key="frame" x="263" y="0.0" width="111" height="112"/>
-                                                <state key="normal" title="Pump 6"/>
-                                                <connections>
-                                                    <action selector="pumpSixPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="Wyb-p1-J9q"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dqi-cX-aCd">
-                                        <rect key="frame" x="0.0" y="243" width="374" height="111"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vt8-PV-zar">
-                                                <rect key="frame" x="0.0" y="0.0" width="111" height="111"/>
-                                                <state key="normal" title="Pump 7"/>
-                                                <connections>
-                                                    <action selector="pumpSevenPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="fRk-kA-TRa"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJU-tQ-Noi">
-                                                <rect key="frame" x="131" y="0.0" width="112" height="111"/>
-                                                <state key="normal" title="Pump 8"/>
-                                                <connections>
-                                                    <action selector="pumpEightPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="RwP-Lr-KHl"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGG-BG-6Kf">
-                                                <rect key="frame" x="263" y="0.0" width="111" height="111"/>
-                                                <state key="normal" title="Pump 9"/>
-                                                <connections>
-                                                    <action selector="pumpNinePressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="AFm-Yd-HkG"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QQu-OK-hnk">
-                                        <rect key="frame" x="0.0" y="364" width="374" height="111"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HS9-5h-TKZ">
-                                                <rect key="frame" x="131" y="0.0" width="112" height="111"/>
-                                                <state key="normal" title="Pump 10"/>
-                                                <connections>
-                                                    <action selector="pumpTenPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="j7y-AO-f9l"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="HS9-5h-TKZ" firstAttribute="height" secondItem="cJU-tQ-Noi" secondAttribute="height" id="Qg7-G7-SUw"/>
-                                    <constraint firstItem="HS9-5h-TKZ" firstAttribute="width" secondItem="cJU-tQ-Noi" secondAttribute="width" id="e9L-1a-vQq"/>
-                                    <constraint firstItem="QQu-OK-hnk" firstAttribute="width" secondItem="cJU-tQ-Noi" secondAttribute="height" multiplier="20:3" id="eeQ-KO-bV9"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="eeQ-KO-bV9"/>
-                                    </mask>
-                                </variation>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Pump " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKD-aK-NgW">
                                 <rect key="frame" x="20" y="40" width="374" height="40"/>
                                 <constraints>
@@ -321,18 +213,38 @@
                                     <action selector="goBackPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="ZfX-sb-21n"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-Z3-VDT">
+                                <rect key="frame" x="0.0" y="100" width="414" height="556"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RbQ-Zq-8UE">
+                                    <size key="itemSize" width="120" height="114"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pumpCell" id="5Li-Bz-TP8">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="114"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="114"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="5sn-uu-87A" secondAttribute="trailing" constant="20" id="1Mt-AG-zzt"/>
+                            <constraint firstItem="zhy-Z3-VDT" firstAttribute="top" secondItem="hKD-aK-NgW" secondAttribute="bottom" constant="20" id="3Bz-BU-bKy"/>
                             <constraint firstAttribute="trailing" secondItem="hKD-aK-NgW" secondAttribute="trailing" constant="20" id="4x4-3F-x8E"/>
                             <constraint firstItem="5sn-uu-87A" firstAttribute="leading" secondItem="y5g-O2-uSd" secondAttribute="leading" constant="20" id="7YC-7X-FP0"/>
-                            <constraint firstItem="I4A-8u-aIB" firstAttribute="top" secondItem="hKD-aK-NgW" secondAttribute="bottom" constant="20" id="Ed0-pR-2La"/>
-                            <constraint firstAttribute="trailing" secondItem="I4A-8u-aIB" secondAttribute="trailing" constant="20" id="IWT-ZK-iWr"/>
-                            <constraint firstItem="5sn-uu-87A" firstAttribute="top" secondItem="I4A-8u-aIB" secondAttribute="bottom" priority="250" constant="20" id="LqB-EX-zN2"/>
+                            <constraint firstItem="zhy-Z3-VDT" firstAttribute="leading" secondItem="y5g-O2-uSd" secondAttribute="leading" id="L9y-bZ-E9g"/>
                             <constraint firstItem="hKD-aK-NgW" firstAttribute="top" secondItem="qin-mh-Umy" secondAttribute="bottom" constant="20" id="M3B-qd-eFY"/>
+                            <constraint firstItem="5sn-uu-87A" firstAttribute="top" secondItem="zhy-Z3-VDT" secondAttribute="bottom" constant="20" id="egB-Nz-N89"/>
+                            <constraint firstAttribute="trailing" secondItem="zhy-Z3-VDT" secondAttribute="trailing" id="hdw-g6-uiJ"/>
                             <constraint firstItem="EuO-sr-Cka" firstAttribute="top" secondItem="5sn-uu-87A" secondAttribute="bottom" constant="20" id="i6v-uV-8ag"/>
-                            <constraint firstItem="I4A-8u-aIB" firstAttribute="leading" secondItem="y5g-O2-uSd" secondAttribute="leading" constant="20" id="pqo-Ld-2w9"/>
                             <constraint firstItem="hKD-aK-NgW" firstAttribute="leading" secondItem="y5g-O2-uSd" secondAttribute="leading" constant="20" id="pwx-RV-CML"/>
                         </constraints>
                     </view>
@@ -354,50 +266,131 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMc-Xm-1J5">
-                                <rect key="frame" x="86" y="163" width="67" height="30"/>
-                                <state key="normal" title="Open Tab"/>
-                                <connections>
-                                    <action selector="openTabPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="1L8-OL-n7s"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qy-xs-KGe">
-                                <rect key="frame" x="80" y="285" width="30" height="30"/>
-                                <state key="normal" title="40"/>
-                                <connections>
-                                    <action selector="fortyPrepaidPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="27O-kE-jHy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-QT-ryG">
-                                <rect key="frame" x="300" y="135" width="30" height="30"/>
-                                <state key="normal" title="20"/>
-                                <connections>
-                                    <action selector="twentyPrepaidPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="Pbl-Iz-l4b"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxX-32-hI2">
-                                <rect key="frame" x="267" y="268" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7of-5d-oB9">
-                                <rect key="frame" x="401" y="277" width="52" height="21"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ve5-9p-Lvu">
+                                <rect key="frame" x="20" y="170" width="560" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMc-Xm-1J5">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="786-L9-n4w"/>
+                                        </constraints>
+                                        <state key="normal" title="Open Tab"/>
+                                        <connections>
+                                            <action selector="openTabPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="1L8-OL-n7s"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mGO-l1-Seo">
+                                        <rect key="frame" x="280" y="0.0" width="280" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxX-32-hI2">
+                                                <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Others" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7of-5d-oB9">
+                                                <rect key="frame" x="145" y="0.0" width="135" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IYd-rb-SqM">
+                                <rect key="frame" x="20" y="490" width="560" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHV-VG-WeF">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="40"/>
+                                        <state key="normal" title="Begin Fueling"/>
+                                        <connections>
+                                            <action selector="beginFueling:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="X4B-q4-uXy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WuS-fx-Uy8">
+                                        <rect key="frame" x="0.0" y="50" width="560" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CNa-yY-ICA"/>
+                                        </constraints>
+                                        <state key="normal" title="Go Back"/>
+                                        <connections>
+                                            <action selector="goBackPressed:" destination="UNH-Bw-rLS" eventType="touchUpInside" id="R7y-7s-Fz8"/>
+                                            <action selector="goBackPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="SAB-bw-Bbz"/>
+                                            <action selector="goBackPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="YLF-Hi-hY9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How much do you want to fill?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C6o-Ud-L9P">
+                                <rect key="frame" x="20" y="40" width="560" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eVs-By-CIo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHV-VG-WeF">
-                                <rect key="frame" x="287" y="451" width="93" height="30"/>
-                                <state key="normal" title="Begin Fueling"/>
-                                <connections>
-                                    <action selector="beginFueling:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="X4B-q4-uXy"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1mw-2H-j9Q">
+                                <rect key="frame" x="20" y="230" width="560" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIr-2s-Shk">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rIr-2s-Shk" secondAttribute="height" multiplier="1:1" id="B84-th-hC2"/>
+                                        </constraints>
+                                        <state key="normal" title="10"/>
+                                        <connections>
+                                            <action selector="tenPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="9Kw-tc-Sqo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-QT-ryG">
+                                        <rect key="frame" x="140" y="0.0" width="140" height="140"/>
+                                        <state key="normal" title="20"/>
+                                        <connections>
+                                            <action selector="twentyPrepaidPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="Pbl-Iz-l4b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vb3-Zg-P8R">
+                                        <rect key="frame" x="280" y="0.0" width="140" height="140"/>
+                                        <state key="normal" title="30"/>
+                                        <connections>
+                                            <action selector="thirtyPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="2G4-jO-DxF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qy-xs-KGe">
+                                        <rect key="frame" x="420" y="0.0" width="140" height="140"/>
+                                        <state key="normal" title="40"/>
+                                        <connections>
+                                            <action selector="fortyPrepaidPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="27O-kE-jHy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ve5-9p-Lvu" secondAttribute="trailing" constant="20" id="0MG-SR-oOV"/>
+                            <constraint firstItem="1mw-2H-j9Q" firstAttribute="centerY" secondItem="6I4-8W-s3a" secondAttribute="centerY" id="KlJ-gO-tWj"/>
+                            <constraint firstItem="T8u-WQ-PZv" firstAttribute="top" secondItem="IYd-rb-SqM" secondAttribute="bottom" constant="20" id="LX4-dZ-Bp9"/>
+                            <constraint firstItem="IYd-rb-SqM" firstAttribute="leading" secondItem="6I4-8W-s3a" secondAttribute="leading" constant="20" id="MWc-Se-wIr"/>
+                            <constraint firstItem="Ve5-9p-Lvu" firstAttribute="leading" secondItem="6I4-8W-s3a" secondAttribute="leading" constant="20" id="Rwg-Bd-EQz"/>
+                            <constraint firstAttribute="trailing" secondItem="IYd-rb-SqM" secondAttribute="trailing" constant="20" id="Seh-wq-Lkq"/>
+                            <constraint firstItem="C6o-Ud-L9P" firstAttribute="top" secondItem="qir-JG-4Zg" secondAttribute="bottom" constant="20" id="W4K-P9-4KD"/>
+                            <constraint firstAttribute="trailing" secondItem="C6o-Ud-L9P" secondAttribute="trailing" constant="20" id="a20-Zz-NaI"/>
+                            <constraint firstItem="1mw-2H-j9Q" firstAttribute="leading" secondItem="6I4-8W-s3a" secondAttribute="leading" constant="20" id="b7y-F9-kjB"/>
+                            <constraint firstItem="1mw-2H-j9Q" firstAttribute="top" secondItem="Ve5-9p-Lvu" secondAttribute="bottom" constant="20" id="mhm-az-c17"/>
+                            <constraint firstAttribute="trailing" secondItem="1mw-2H-j9Q" secondAttribute="trailing" constant="20" id="sLl-We-aAa"/>
+                            <constraint firstItem="C6o-Ud-L9P" firstAttribute="leading" secondItem="6I4-8W-s3a" secondAttribute="leading" constant="20" id="wvf-BU-6Vh"/>
+                            <constraint firstItem="1mw-2H-j9Q" firstAttribute="centerX" secondItem="6I4-8W-s3a" secondAttribute="centerX" id="znw-4D-9H2"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="fortyPressed" destination="9qy-xs-KGe" id="WiW-jo-cCm"/>
+                        <outlet property="openTabPressed" destination="gMc-Xm-1J5" id="vPg-eE-sPd"/>
                         <outlet property="othersPrepaidAmount" destination="dxX-32-hI2" id="MvB-MN-YhI"/>
+                        <outlet property="tenPressed" destination="rIr-2s-Shk" id="cab-Rs-G4D"/>
+                        <outlet property="thirtyPressed" destination="vb3-Zg-P8R" id="BgU-QA-9J0"/>
+                        <outlet property="twentyPressed" destination="fFC-QT-ryG" id="2je-Hn-O0K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OrL-WT-wtw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -416,14 +409,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Begin Fueling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgk-EB-jQd">
-                                <rect key="frame" x="103" y="33" width="401" height="146"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin Fueling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgk-EB-jQd">
+                                <rect key="frame" x="248" y="290" width="104" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gc-lm-dBr">
+                                <rect key="frame" x="20" y="540" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ykc-LO-Yso"/>
+                                </constraints>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="goBackPressed:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="Lxa-2u-FEv"/>
+                                    <action selector="goBackPressed:" destination="Z49-Ks-0Ls" eventType="touchUpInside" id="c5e-GO-Y4g"/>
+                                    <action selector="goBackPressed:" destination="UNH-Bw-rLS" eventType="touchUpInside" id="eBy-z4-7jn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tgk-EB-jQd" firstAttribute="centerY" secondItem="aYZ-0V-hUe" secondAttribute="centerY" id="6gY-wa-wVJ"/>
+                            <constraint firstItem="hpk-QH-wlC" firstAttribute="top" secondItem="3gc-lm-dBr" secondAttribute="bottom" constant="20" id="9Lx-lC-hEp"/>
+                            <constraint firstItem="3gc-lm-dBr" firstAttribute="leading" secondItem="aYZ-0V-hUe" secondAttribute="leading" constant="20" id="cMI-vy-2tC"/>
+                            <constraint firstItem="tgk-EB-jQd" firstAttribute="centerX" secondItem="aYZ-0V-hUe" secondAttribute="centerX" id="dc4-cJ-Ysv"/>
+                            <constraint firstAttribute="trailing" secondItem="3gc-lm-dBr" secondAttribute="trailing" constant="20" id="x4G-50-9nn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6B-lW-2pu" userLabel="First Responder" sceneMemberID="firstResponder"/>
