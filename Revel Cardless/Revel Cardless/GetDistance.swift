@@ -9,7 +9,7 @@
 import Foundation
 import MapKit
 
-class getDistance {
+class GetDistance {
     
     class func getDistance(startLocationLatitude: Double, startLocationLongitude: Double, distinationLocationLatitude: Double, distinationLocationLongitude: Double) -> Double {
         var routeDistance:Double = 0;

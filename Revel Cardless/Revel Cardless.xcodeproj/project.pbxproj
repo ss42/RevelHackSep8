@@ -23,6 +23,8 @@
 		92347C531D82B0800053CB39 /* JSONestablishmentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C521D82B0800053CB39 /* JSONestablishmentRequest.swift */; };
 		92347C551D82B0960053CB39 /* JSONsendTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C541D82B0960053CB39 /* JSONsendTransaction.swift */; };
 		92347C571D82B0B00053CB39 /* CalculatePromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C561D82B0B00053CB39 /* CalculatePromotion.swift */; };
+		92347C5A1D82B3890053CB39 /* PumpCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C591D82B3890053CB39 /* PumpCollectionViewCell.swift */; };
+		92347C5C1D82B63E0053CB39 /* CustumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92347C5B1D82B63E0053CB39 /* CustumView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		92347C521D82B0800053CB39 /* JSONestablishmentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONestablishmentRequest.swift; sourceTree = "<group>"; };
 		92347C541D82B0960053CB39 /* JSONsendTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONsendTransaction.swift; sourceTree = "<group>"; };
 		92347C561D82B0B00053CB39 /* CalculatePromotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatePromotion.swift; sourceTree = "<group>"; };
+		92347C591D82B3890053CB39 /* PumpCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PumpCollectionViewCell.swift; sourceTree = "<group>"; };
+		92347C5B1D82B63E0053CB39 /* CustumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustumView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,16 +80,18 @@
 		92347C1D1D82A0DA0053CB39 /* Revel Cardless */ = {
 			isa = PBXGroup;
 			children = (
+				92347C221D82A0DA0053CB39 /* Main.storyboard */,
+				92347C5B1D82B63E0053CB39 /* CustumView.swift */,
 				92347C1E1D82A0DA0053CB39 /* AppDelegate.swift */,
 				92347C401D82A1920053CB39 /* BeginFuelingViewController.swift */,
 				92347C411D82A1920053CB39 /* ChooseFuelViewController.swift */,
 				92347C4C1D82A19A0053CB39 /* MenuViewController.swift */,
 				92347C4D1D82A19A0053CB39 /* SelectPumpViewController.swift */,
+				92347C591D82B3890053CB39 /* PumpCollectionViewCell.swift */,
 				92347C421D82A1920053CB39 /* Constants.swift */,
 				92347C431D82A1920053CB39 /* DistanceToStoreViewController.swift */,
 				92347C441D82A1920053CB39 /* GasStationsTableViewCell.swift */,
 				92347C451D82A1920053CB39 /* GetDistance.swift */,
-				92347C221D82A0DA0053CB39 /* Main.storyboard */,
 				92347C581D82B0B80053CB39 /* JSON */,
 				92347C561D82B0B00053CB39 /* CalculatePromotion.swift */,
 				92347C251D82A0DB0053CB39 /* Assets.xcassets */,
@@ -176,10 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92347C5A1D82B3890053CB39 /* PumpCollectionViewCell.swift in Sources */,
 				92347C471D82A1920053CB39 /* ChooseFuelViewController.swift in Sources */,
 				92347C461D82A1920053CB39 /* BeginFuelingViewController.swift in Sources */,
 				92347C491D82A1920053CB39 /* DistanceToStoreViewController.swift in Sources */,
 				92347C1F1D82A0DA0053CB39 /* AppDelegate.swift in Sources */,
+				92347C5C1D82B63E0053CB39 /* CustumView.swift in Sources */,
 				92347C4A1D82A1920053CB39 /* GasStationsTableViewCell.swift in Sources */,
 				92347C4F1D82A19A0053CB39 /* SelectPumpViewController.swift in Sources */,
 				92347C551D82B0960053CB39 /* JSONsendTransaction.swift in Sources */,

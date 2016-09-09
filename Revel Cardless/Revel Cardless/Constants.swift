@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants{
     struct Segues {
@@ -19,6 +20,12 @@ struct Constants{
         
        
         
+    }
+    
+    struct Colors {
+        static let darkBlue = UIColor(red: 0 , green: 133, blue: 193, alpha: 1.0)
+        static let lightBlue = UIColor(red: 25, green: 142, blue: 202, alpha: 1.0)
+        static let background = UIColor(red: 252, green: 252, blue: 252, alpha: 1.0)
     }
     
 }

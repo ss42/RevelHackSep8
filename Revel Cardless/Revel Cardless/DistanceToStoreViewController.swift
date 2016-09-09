@@ -11,7 +11,7 @@ import MapKit
 
 class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    
+    var distanceAway = 0
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -32,6 +32,7 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
         let routeDistance = getDistance(37.796980, startLocationLongitude: -122.405078, distinationLocationLatitude: 37.800705, distinationLocationLongitude: -122.431450);
         print("routeDistance = \(routeDistance)")
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     func getDistance(startLocationLatitude: Double, startLocationLongitude: Double, distinationLocationLatitude: Double, distinationLocationLongitude: Double) -> Double {
@@ -55,6 +56,7 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
             else {
                 for route in response!.routes{
                     print("Distance = \(route.distance)")
+                    self.distanceAway = Int(route.distance * 0.621371)
                     routeDistance = route.distance
                     for step in route.steps{
                         print(step.instructions)
@@ -89,7 +91,7 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
         
         let cell: GasStationsTableViewCell = tableView.dequeueReusableCellWithIdentifier("StoreCell") as! GasStationsTableViewCell
         
-        cell.storeDetail.text = "Shell @ 1800 Lombard Street"
+        cell.storeDetail.text = "Shell @ 1800 Lombard Street" + " " + "1.84 miles away"
         cell.price.text = "$2.61"
         return cell
     }

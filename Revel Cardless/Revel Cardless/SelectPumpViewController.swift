@@ -8,10 +8,23 @@
 
 import UIKit
 
-class SelectPumpViewController: UIViewController {
+class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    
+    var testPump = [String]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        
+        //let getJSON = JSONpumpParser()
+        //getJSON.runJSONparser()
+        testPump = JSONpumpParser.pumpArray
 
         // Do any additional setup after loading the view.
     }
@@ -34,47 +47,20 @@ class SelectPumpViewController: UIViewController {
         
         
     }
-    @IBAction func pumpOnePressed(sender: AnyObject) {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return testPump.count
+    }
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         performSegue(Constants.Segues.chooseFuel)
-        
     }
-    @IBAction func pumpTwoPressed(sender: AnyObject) {
+ 
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        
-        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pumpCell", forIndexPath: indexPath) as! PumpCollectionViewCell
+        cell.pumpText.text = testPump[indexPath.row]
+        return cell
     }
-    @IBAction func pumpThreePressed(sender: AnyObject) {
-        
-        
-        
-    }
-    @IBAction func pumpFourPressed(sender: AnyObject) {
-        
-        
-        
-    }
-    @IBAction func pumpFivePressed(sender: AnyObject) {
-        
-        
-    }
-    @IBAction func pumpSixPressed(sender: AnyObject) {
-        
-    }
-    @IBAction func pumpSevenPressed(sender: AnyObject) {
-        
-    }
-    @IBAction func pumpEightPressed(sender: AnyObject) {
-        
-        
-    }
-    @IBAction func pumpNinePressed(sender: AnyObject) {
-        
-        
-    }
-    @IBAction func pumpTenPressed(sender: AnyObject) {
-        
-        
-    }
+
    
 
 }
