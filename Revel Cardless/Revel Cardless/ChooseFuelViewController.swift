@@ -87,6 +87,7 @@ class ChooseFuelViewController: UIViewController {
         
         // segue to wait screen
         
+        
     }
     
     func clearColors(){
