@@ -13,13 +13,13 @@ class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet weak var collectionView: UICollectionView!
     
     
-    var testPump = [String]()
+    var testPump = [Pump]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        print(testPump.count)
+        
         
         
         //let getJSON = JSONpumpParser()
@@ -57,7 +57,20 @@ class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pumpCell", forIndexPath: indexPath) as! PumpCollectionViewCell
-        cell.pumpText.text = testPump[indexPath.row]
+        //print(testPump[0].pump_name)
+        let pump = testPump[indexPath.row] as Pump
+        
+        
+        cell.pumpText.text = pump.pump_name
+        print(pump.pump_name)
+        print("cell")
+        
+        if (pump.pump_is_occupied == true){
+            cell.pumpText.backgroundColor = UIColor.redColor()
+            
+        }
+        print(pump.pump_is_occupied)
+        
         return cell
     }
 

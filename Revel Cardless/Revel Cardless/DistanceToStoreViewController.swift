@@ -13,6 +13,11 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
     
     var distanceAway = 0
     
+    var pumpList = [Pump]()
+    
+    var shellLocations = ["Shell @ 1800 Lombard Street" + " " + "1.84 miles away", "Shell @ 100 Market Street" + " " + "3.84 miles away", "Shell @ 231 Mason Street" + " " + "3.44 miles away", "Shell @ 230 Broadway Street" + " " + "3.44 miles away"]
+    var shellPrice = ["$2.61", "$2.22", "$2.61", "3.01"]
+    
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -76,7 +81,7 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -91,10 +96,13 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
         
         let cell: GasStationsTableViewCell = tableView.dequeueReusableCellWithIdentifier("StoreCell") as! GasStationsTableViewCell
         
-        cell.storeDetail.text = "Shell @ 1800 Lombard Street" + " " + "1.84 miles away"
-        cell.price.text = "$2.61"
+        cell.storeDetail.text = shellLocations[indexPath.row]
+        cell.price.text = shellPrice[indexPath.row]
         return cell
     }
+    
+    
+
     
 
 

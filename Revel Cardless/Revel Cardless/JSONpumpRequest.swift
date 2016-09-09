@@ -24,7 +24,6 @@ struct Pump {
 class JSONpumpParser {
     var pumplist: [Pump]?
     
-    static var pumpArray = 0
     
     func runJSONparser() {
         sendRequest("https://team5-hackathon.revelup.com/resources/Pumps/", parameters: ["api_key":"d5c40495e6c744f79c999722e25764fb","api_secret":"038b36255e114458adc02ca87602c7a8b0219cf8aef2461faa977b4107454be6"], completionHandler: {a,b,c in
@@ -34,7 +33,13 @@ class JSONpumpParser {
             do {
                 let object = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
                 if let dictionary = object as? [String: AnyObject] {
-                    self.pumplist = self.readJSONobject(dictionary)
+                    
+                    dispatch_async(dispatch_get_main_queue(),{
+                        self.pumplist = self.readJSONobject(dictionary)
+                        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                        appDelegate.pumpList = self.pumplist!
+                    })
+                    
                 }
             } catch {
                 print("error") //exception handling goes here, "error" for now; need sophisticated exception handling implementation
@@ -67,7 +72,8 @@ class JSONpumpParser {
         let newobject = object["objects"] as! [[String: AnyObject]]
         
         for pumps in newobject {
-            let tempPump = Pump(pump_name: String(pumps["name"]), pump_number: String(pumps["number"]!), pump_is_occupied: Bool(pumps["is_synced"]! as! NSNumber))
+            print(pumps["name"])
+            let tempPump = Pump(pump_name: String(pumps["name"]!), pump_number: String(pumps["number"]!), pump_is_occupied: Bool(pumps["is_synced"]! as! NSNumber))
             pumplist.append(tempPump)
         }
         //self.pumpArray = pumplist
