@@ -30,10 +30,13 @@ class GetDistance {
             else {
                 for route in response!.routes{
                     print("Distance = \(route.distance)")
-                    routeDistance = route.distance
+                    if(route.distance>0){
+                        routeDistance = route.distance
+                    }
+                    /**
                     for step in route.steps{
                         print(step.instructions)
-                    }  
+                    } **/ 
                 }
             }
         }

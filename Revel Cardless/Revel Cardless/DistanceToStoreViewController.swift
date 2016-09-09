@@ -11,12 +11,12 @@ import MapKit
 
 class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    var distanceAway = 0
+    var distanceAway:Double = 0
     
     var pumpList = [Pump]()
     
     var shellLocations = ["Shell @ 1800 Lombard Street" + " " + "1.84 miles away", "Shell @ 100 Market Street" + " " + "3.84 miles away", "Shell @ 231 Mason Street" + " " + "3.44 miles away", "Shell @ 230 Broadway Street" + " " + "3.44 miles away"]
-    var shellPrice = ["$2.61", "$2.22", "$2.61", "3.01"]
+    var shellPrice = ["$2.61", "$2.22", "$2.61", "$3.01"]
     
     @IBOutlet weak var tableView: UITableView!
 
@@ -34,24 +34,21 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
         // distination:
         // 1800 Lombard Street, San Francisco, CA
         // 37.800705, -122.431450
-        let routeDistance = getDistance(37.796980, startLocationLongitude: -122.405078, distinationLocationLatitude: 37.800705, distinationLocationLongitude: -122.431450);
+        let routeDistance = self.getDistance(37.796980, startLocationLongitude: -122.405078, distinationLocationLatitude: 37.800705, distinationLocationLongitude: -122.431450);
         print("routeDistance = \(routeDistance)")
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-
     func getDistance(startLocationLatitude: Double, startLocationLongitude: Double, distinationLocationLatitude: Double, distinationLocationLongitude: Double) -> Double {
         var routeDistance:Double = 0;
         let directionRequest = MKDirectionsRequest()
-        //set up the distination coordination
+        //set up the d
         let sourceCoord = CLLocationCoordinate2D(latitude: startLocationLatitude, longitude: startLocationLongitude)
         let destinationCoord = CLLocationCoordinate2D(latitude: distinationLocationLatitude, longitude: distinationLocationLongitude)
         let mkPlacemarkOrigen = MKPlacemark(coordinate: sourceCoord, addressDictionary: nil)
         let mkPlacemarkDestination = MKPlacemark(coordinate: destinationCoord, addressDictionary: nil)
         let source:MKMapItem = MKMapItem(placemark: mkPlacemarkOrigen)
         let destination:MKMapItem = MKMapItem(placemark: mkPlacemarkDestination)
-        //set up directionRequest
-        directionRequest.transportType = .Automobile
         directionRequest.source =  source
         directionRequest.destination = destination
         let directions = MKDirections(request: directionRequest)
@@ -61,11 +58,14 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
             else {
                 for route in response!.routes{
                     print("Distance = \(route.distance)")
-                    self.distanceAway = Int(route.distance * 0.621371)
-                    routeDistance = route.distance
-                    for step in route.steps{
-                        print(step.instructions)
+                    if(route.distance>0){
+                        //routeDistance = route.distance
+                        self.distanceAway = route.distance
                     }
+                    /**
+                     for step in route.steps{
+                     print(step.instructions)
+                     } **/
                 }
             }
         }
