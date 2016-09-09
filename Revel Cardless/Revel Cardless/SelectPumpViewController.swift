@@ -22,6 +22,16 @@ class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICo
         
         
         
+        dispatch_async(dispatch_get_main_queue(),{
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            self.testPump = appDelegate.pumpList
+            print("dispatch")
+            
+        })
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        
         //let getJSON = JSONpumpParser()
         //getJSON.runJSONparser()
         //testPump = JSONpumpParser.pumpArray
