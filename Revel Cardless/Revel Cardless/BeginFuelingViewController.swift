@@ -12,6 +12,22 @@ class BeginFuelingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let total = 5
+        let totalData = JSONsendTransaction()
+        //let priceData = totalData.getPrice(5)
+        if totalData.prepareDataForPriceCheck(5)
+        {
+            print("ok im ready to buy some gas!")
+        }
+        
+        if totalData.prepareDataForValidation()
+        {
+            print("ok the data is ready to roll!")
+        }
+        if totalData.prepareDataForSale()
+        {
+            print("ok we have sold it!!!")
+        }
 
         // Do any additional setup after loading the view.
     }
