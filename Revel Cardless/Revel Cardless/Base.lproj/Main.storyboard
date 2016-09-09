@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ETu-Aj-jiG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ETu-Aj-jiG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,15 +18,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eyg-Wr-bvG">
-                                <rect key="frame" x="0.0" y="119" width="600" height="481"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eyg-Wr-bvG">
+                                <rect key="frame" x="0.0" y="119" width="600" height="432"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreCell" rowHeight="76" id="MaR-6a-koZ" customClass="GasStationsTableViewCell" customModule="Revel_Cardless" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MaR-6a-koZ" id="PqR-3O-NSO">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="75.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBr-H6-Lge">
@@ -91,15 +91,37 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sh1-iz-AYf">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress1" translatesAutoresizingMaskIntoConstraints="NO" id="egD-NW-V3I">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress2" translatesAutoresizingMaskIntoConstraints="NO" id="sRC-AX-jp6">
+                                        <rect key="frame" x="200" y="0.0" width="200" height="50"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress3" translatesAutoresizingMaskIntoConstraints="NO" id="W2G-VK-fxq">
+                                        <rect key="frame" x="400" y="0.0" width="200" height="50"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FId-88-fLA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eyg-Wr-bvG" secondAttribute="trailing" id="5N2-Ys-8vm"/>
+                            <constraint firstAttribute="trailing" secondItem="sh1-iz-AYf" secondAttribute="trailing" id="7bR-kQ-UWa"/>
+                            <constraint firstItem="sh1-iz-AYf" firstAttribute="leading" secondItem="2ya-V6-m6e" secondAttribute="leading" id="ELM-r7-yPV"/>
+                            <constraint firstItem="sh1-iz-AYf" firstAttribute="leading" secondItem="2ya-V6-m6e" secondAttribute="leading" id="GlT-lx-I4I"/>
                             <constraint firstAttribute="trailing" secondItem="L8p-VZ-kHi" secondAttribute="trailing" constant="5" id="KD9-K1-qjt"/>
                             <constraint firstAttribute="trailing" secondItem="Q7f-4W-39W" secondAttribute="trailing" constant="20" id="LN7-H0-qzG"/>
+                            <constraint firstItem="QNj-1T-Y04" firstAttribute="top" secondItem="sh1-iz-AYf" secondAttribute="bottom" id="Tci-yq-uRS"/>
                             <constraint firstItem="L8p-VZ-kHi" firstAttribute="top" secondItem="Q7f-4W-39W" secondAttribute="bottom" constant="16" id="Wcy-Qf-mnV"/>
+                            <constraint firstAttribute="trailing" secondItem="sh1-iz-AYf" secondAttribute="trailing" id="Wsb-A2-Sfn"/>
                             <constraint firstItem="Q7f-4W-39W" firstAttribute="top" secondItem="rJG-2X-Vk4" secondAttribute="bottom" constant="10" id="aNG-mc-p9a"/>
-                            <constraint firstItem="QNj-1T-Y04" firstAttribute="top" secondItem="eyg-Wr-bvG" secondAttribute="bottom" id="euO-JY-ZYg"/>
+                            <constraint firstItem="QNj-1T-Y04" firstAttribute="top" secondItem="eyg-Wr-bvG" secondAttribute="bottom" priority="250" id="euO-JY-ZYg"/>
                             <constraint firstItem="Q7f-4W-39W" firstAttribute="leading" secondItem="2ya-V6-m6e" secondAttribute="leading" constant="20" id="l32-Vr-uSQ"/>
                             <constraint firstItem="eyg-Wr-bvG" firstAttribute="top" secondItem="L8p-VZ-kHi" secondAttribute="bottom" constant="5" id="lQ4-f7-PVQ"/>
                             <constraint firstItem="eyg-Wr-bvG" firstAttribute="leading" secondItem="2ya-V6-m6e" secondAttribute="leading" id="o8Q-8c-aq4"/>
@@ -491,4 +513,9 @@
             <point key="canvasLocation" x="2661" y="331"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="progress1" width="1500" height="600"/>
+        <image name="progress2" width="1500" height="600"/>
+        <image name="progress3" width="1500" height="600"/>
+    </resources>
 </document>
