@@ -53,28 +53,30 @@ class ChooseFuelViewController: UIViewController {
     
     //When you don't know how much you need
     @IBAction func openTabPressed(sender: AnyObject) {
-        
+        othersPrepaidAmount.text = "Ready!"
         
     }
 
     @IBAction func tenPressed(sender: AnyObject) {
+        othersPrepaidAmount.text = "$10.00"
     }
     @IBAction func twentyPrepaidPressed(sender: AnyObject) {
         
-        
+        othersPrepaidAmount.text = "$20.00"
         
     }
     @IBAction func thirtyPressed(sender: AnyObject) {
+        othersPrepaidAmount.text = "$30.00"
     }
 
     @IBAction func fortyPrepaidPressed(sender: AnyObject){
-    
+        othersPrepaidAmount.text = "$40.00"
     
     }
     
     @IBAction func beginFueling(sender: AnyObject) {
         
-        
+        // segue to wait screen
         
     }
     
