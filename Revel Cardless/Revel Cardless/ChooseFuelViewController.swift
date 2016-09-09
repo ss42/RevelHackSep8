@@ -52,25 +52,34 @@ class ChooseFuelViewController: UIViewController {
     
     
     //When you don't know how much you need
-    @IBAction func openTabPressed(sender: AnyObject) {
+    @IBAction func openTabPressed(sender: UIButton) {
         othersPrepaidAmount.text = "Ready!"
+        clearColors()
+        sender.backgroundColor = UIColor.lightGrayColor()
         
     }
 
-    @IBAction func tenPressed(sender: AnyObject) {
+    @IBAction func tenPressed(sender: UIButton) {
         othersPrepaidAmount.text = "$10.00"
+        clearColors()
+        sender.backgroundColor = UIColor.lightGrayColor()
     }
-    @IBAction func twentyPrepaidPressed(sender: AnyObject) {
-        
+    @IBAction func twentyPrepaidPressed(sender: UIButton) {
+        clearColors()
         othersPrepaidAmount.text = "$20.00"
+        sender.backgroundColor = UIColor.lightGrayColor()
         
     }
-    @IBAction func thirtyPressed(sender: AnyObject) {
+    @IBAction func thirtyPressed(sender: UIButton) {
+        clearColors()
         othersPrepaidAmount.text = "$30.00"
+        sender.backgroundColor = UIColor.lightGrayColor()
     }
 
-    @IBAction func fortyPrepaidPressed(sender: AnyObject){
+    @IBAction func fortyPrepaidPressed(sender: UIButton){
+        clearColors()
         othersPrepaidAmount.text = "$40.00"
+        sender.backgroundColor = UIColor.lightGrayColor()
     
     }
     
@@ -80,6 +89,13 @@ class ChooseFuelViewController: UIViewController {
         
     }
     
+    func clearColors(){
+        openTabPressed.backgroundColor = UIColor.clearColor()
+        twentyPressed.backgroundColor = UIColor.clearColor()
+        tenPressed.backgroundColor = UIColor.clearColor()
+        thirtyPressed.backgroundColor = UIColor.clearColor()
+        fortyPressed.backgroundColor = UIColor.clearColor()
+    }
     
     
 }
