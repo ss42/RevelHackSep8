@@ -63,3 +63,40 @@ class UnderlinedLabel: UILabel {
         layer.addSublayer(border)
     }
 }
+extension UIStackView {
+    
+    
+    @IBInspectable
+    var stackBorderWidth: CGFloat{
+        get {
+            return layer.borderWidth
+        }
+        set(newBoarderWidth){
+            layer.borderWidth = newBoarderWidth
+        }
+    }
+    
+    @IBInspectable
+    var stackBorderColor: UIColor?{
+        get {
+            return layer.borderColor != nil ? UIColor(CGColor: layer.borderColor!) : nil
+        }
+        set {
+            layer.borderColor = newValue?.CGColor
+        }
+    }
+    @IBInspectable
+    var stackCornerRadius: CGFloat{
+        get{
+            return layer.cornerRadius
+        }
+        set{
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue != 0
+        }
+    }
+    
+    
+    
+    
+}

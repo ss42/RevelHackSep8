@@ -15,7 +15,7 @@ class DistanceToStoreViewController: UIViewController, UITableViewDelegate, UITa
     
     var pumpList = [Pump]()
     
-    var shellLocations = ["Shell @ 1800 Lombard Street" + " " + "1.84 miles away", "Shell @ 100 Market Street" + " " + "3.84 miles away", "Shell @ 231 Mason Street" + " " + "3.44 miles away", "Shell @ 230 Broadway Street" + " " + "3.44 miles away"]
+    var shellLocations = ["Shell @ 1800 Lombard Street" + " " + "1.84 miles away", "Shell @ 100 Market Street" + " " + "3.84 miles away", "Shell @ 231 Mason Street" + " " + "3.44 miles away", "Shell @ 230 Broadway Street" + " " + "3.94 miles away"]
     var shellPrice = ["$2.61", "$2.22", "$2.61", "$3.01"]
     
     @IBOutlet weak var tableView: UITableView!

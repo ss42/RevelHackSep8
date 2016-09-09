@@ -1,18 +1,17 @@
 //
-//  MenuViewController.swift
-//  test
+//  ChoosePaymentViewController.swift
+//  Revel Cardless
 //
-//  Created by Sanjay Shrestha on 9/8/16.
+//  Created by Sanjay Shrestha on 9/9/16.
 //  Copyright © 2016 Stmarys. All rights reserved.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class ChoosePaymentViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
         // Do any additional setup after loading the view.
     }
@@ -22,21 +21,7 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func storePressed(sender: AnyObject) {
-        performSegue(Constants.Segues.advancePayPage)
-        
-    }
-    @IBAction func gasPressed(sender: AnyObject) {
-        performSegue(Constants.Segues.pumpPage)
     
-    }
-    
-    
-    @IBAction func purchaseBothGasAndStore(sender: AnyObject) {
-        
-        
-    }
     func performSegue(segueName: String){
         let vc: UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier(segueName)
         
@@ -44,12 +29,17 @@ class MenuViewController: UIViewController {
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
-    @IBAction func goBackPressed(sender: AnyObject) {
-        performSegue(Constants.Segues.distanceToStore)
     
+    @IBAction func beginFueling(sender: AnyObject) {
+        performSegue(Constants.Segues.beginFuelingPage)
+        
     }
+
     
     
+    @IBAction func backPressed(sender: AnyObject) {
+        performSegue(Constants.Segues.chooseFuel)
+    }
     /*
     // MARK: - Navigation
 
