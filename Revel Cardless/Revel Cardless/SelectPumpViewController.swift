@@ -53,7 +53,7 @@ class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICo
         
     }
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return testPump.count
     }
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         performSegue(Constants.Segues.chooseFuel)
