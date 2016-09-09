@@ -47,3 +47,19 @@ extension UIView {
     
     
 }
+class UnderlinedLabel: UILabel {
+    
+    @IBInspectable var leftLine: Bool = false { didSet{ drawLines() } }
+    @IBInspectable var rightLine: Bool = false { didSet{ drawLines() } }
+    @IBInspectable var bottomLine: Bool = false { didSet{ drawLines() } }
+    @IBInspectable var topLine: Bool = false { didSet{ drawLines() } }
+    
+    func drawLines(){
+        let border = CALayer()
+        let width = CGFloat(2.0)
+        border.borderColor = UIColor.redColor().CGColor
+        border.frame = CGRect(x: 0, y: frame.size.height - width, width: frame.size.width, height: width)
+        border.borderWidth = width
+        layer.addSublayer(border)
+    }
+}
