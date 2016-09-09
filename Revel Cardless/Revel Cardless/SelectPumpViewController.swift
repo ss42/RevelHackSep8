@@ -24,7 +24,7 @@ class SelectPumpViewController: UIViewController, UICollectionViewDelegate, UICo
         
         //let getJSON = JSONpumpParser()
         //getJSON.runJSONparser()
-        testPump = JSONpumpParser.pumpArray
+        //testPump = JSONpumpParser.pumpArray
 
         // Do any additional setup after loading the view.
     }

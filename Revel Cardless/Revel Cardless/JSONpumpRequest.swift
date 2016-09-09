@@ -70,7 +70,7 @@ class JSONpumpParser {
             let tempPump = Pump(pump_name: String(pumps["name"]), pump_number: String(pumps["number"]!), pump_is_occupied: Bool(pumps["is_synced"]! as! NSNumber))
             pumplist.append(tempPump)
         }
-        self.pumpArray = pumplist
+        //self.pumpArray = pumplist
         //pump name: string
         //pump enabled: bool
         //is_synced: bool (what is this?) //we will interpret this as whether the pump is in use or not
