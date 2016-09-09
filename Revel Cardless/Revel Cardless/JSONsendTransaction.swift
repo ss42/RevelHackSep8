@@ -254,6 +254,7 @@ func prepareValidation() -> NSString{
             //some exception handling goes here
         }
     }
+    //submitJSON.string
     print(submitJSON)
     return submitJSON
 }

@@ -9,14 +9,17 @@
 import UIKit
 
 class AdvancePayViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    
+    let testArray = ["Club Sandwich", "BLT", "Buffalo Chicken Sandwich", "CheeseBurger", "Sprite","Coke", "Fanta"]
+    let testPrice = ["$7.00", "$5.00", "$7.00", "$10.99", "$0.99", "$0.99", "$0.99"]
     @IBOutlet weak var tableView: UITableView!
+    
+    var promotionItems = [Promotion_product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
+       tableView.reloadData()
         // Do any additional setup after loading the view.
     }
 
@@ -46,7 +49,7 @@ class AdvancePayViewController: UIViewController, UITableViewDataSource, UITable
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return testArray.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -57,8 +60,10 @@ class AdvancePayViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("ItemsCell")!
-        cell.textLabel!.text = "sdfsdf"
-        cell.detailTextLabel?.text = "sfsdf"
+        
+        //let promotion = promotionItems[indexPath.row]
+        cell.textLabel!.text = testArray[indexPath.row]//promotion.product_name
+        cell.detailTextLabel?.text = testPrice[indexPath.row]//String(promotion.product_price)
         
 
         return cell

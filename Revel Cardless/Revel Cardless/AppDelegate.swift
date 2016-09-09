@@ -13,13 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var pumpList = [Pump]()
+    var total:Double?
+    var promotionArray = [Inventory_product]()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         let getJSON = JSONpumpParser()
         getJSON.runJSONparser()
-        //print(getJSON.pumplist)
-        //var pumpList = getJSON.pumplist!
+        let promotion = JSONinventoryParser()
+        promotion.runInventoryJSONparser()
+        
+     
+       
         return true
     }
     

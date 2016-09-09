@@ -10,6 +10,15 @@ import UIKit
 
 class BeginFuelingViewController: UIViewController {
 
+    @IBOutlet weak var trackerLabel: UILabel!
+    @IBOutlet weak var smallLabel: UILabel!
+    @IBOutlet weak var mainLabel: UILabel!
+    
+    @IBOutlet weak var leftPicture: UIImageView!
+    @IBOutlet weak var activityViewIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var bottomButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let total = 5
@@ -17,21 +26,49 @@ class BeginFuelingViewController: UIViewController {
         //let priceData = totalData.getPrice(5)
         if totalData.prepareDataForPriceCheck(5)
         {
+            
             print("ok im ready to buy some gas!")
+            
+            mainLabel.text = "5.2 gallons of regular will run you: 17.88!"
+            mainLabel.adjustsFontSizeToFitWidth = true
+            smallLabel.text = "Waiting on attendent to authorize your pump!"
+            smallLabel.adjustsFontSizeToFitWidth = true
+            activityViewIndicator.startAnimating()
         }
         
         if totalData.prepareDataForValidation()
         {
             print("ok the data is ready to roll!")
+            //mainLabel.text = "Five gallons of regular will run you: "
+            let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 10 * Int64(NSEC_PER_SEC))
+            dispatch_after(time, dispatch_get_main_queue()) {
+                //put your code which should be executed with a delay here
+                self.smallLabel.text = "Finalizing transaction!"
+                self.activityViewIndicator.startAnimating()
+                if totalData.prepareDataForSale(){
+                    dispatch_after(time, dispatch_get_main_queue()) {
+                        self.smallLabel.text = "Transaction Complete!"
+                        self.activityViewIndicator.stopAnimating()
+                        self.activityViewIndicator.hidesWhenStopped = true
+                        //self.updateRewards()
+                         dispatch_after(time, dispatch_get_main_queue()) {
+                            self.updateRewards()
+                        }
+                    }
+                }
+            }
+            
         }
-        if totalData.prepareDataForSale()
-        {
-            print("ok we have sold it!!!")
-        }
-
+        
+        
+        
         // Do any additional setup after loading the view.
     }
-
+    func updateRewards(){
+        self.bottomButton.setTitle("Done!", forState: .Normal)
+        self.trackerLabel.text = "Loyalty Tracker(206/1000)!"
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
