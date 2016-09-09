@@ -50,6 +50,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="4"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </stackView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.52156862749999999" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
