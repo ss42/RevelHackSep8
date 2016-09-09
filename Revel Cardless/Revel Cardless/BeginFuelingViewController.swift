@@ -21,6 +21,29 @@ class BeginFuelingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func seekAssistance(sender: AnyObject) {
+        alertShow("Notified", message: "Please wait for the Attendent!")
+    }
+    func performSegue(segueName: String){
+        let vc: UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier(segueName)
+        
+        
+        self.presentViewController(vc, animated: true, completion: nil)
+    }
+    
+    func alertShow(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel){(action)-> Void in
+            print("oka")
+            
+            
+        }
+        alert.addAction(action)
+        dispatch_async(dispatch_get_main_queue(), {
+            self.presentViewController(alert, animated: true, completion: nil)
+        })
+    }
 
     /*
     // MARK: - Navigation
