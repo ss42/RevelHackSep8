@@ -35,3 +35,23 @@ struct Constants{
 //
 //
 //self.presentViewController(vc, animated: true, completion: nil)
+
+class Customer{
+    var name:String?
+    var creditDigits:String?
+    var phoneNumber:String?
+    var email:String?
+}
+
+class Order{
+    var customer:Customer?
+    var orderArray:[DummyItems]?
+    var total:Double?
+}
+
+class DummyItems{
+    var name:String?
+    var price:String?
+    var discount:String?
+}
+
