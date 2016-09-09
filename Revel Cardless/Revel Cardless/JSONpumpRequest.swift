@@ -8,7 +8,19 @@
 
 import Foundation
 
-class JSONpumpParser{
+struct Pump {
+    var pump_name: String?
+    var pump_number: String?
+    var pump_is_occupied: Bool?
+    
+    init(pump_name: String, pump_number: String, pump_is_occupied: Bool) {
+        self.pump_name = pump_name
+        self.pump_number = pump_number
+        self.pump_is_occupied = pump_is_occupied
+    }
+}
+
+class JSONpumpParser {
     
     func runJSONparser() {
         sendRequest("https://team5-hackathon.revelup.com/resources/Pumps/", parameters: ["api_key":"d5c40495e6c744f79c999722e25764fb","api_secret":"038b36255e114458adc02ca87602c7a8b0219cf8aef2461faa977b4107454be6"], completionHandler: {a,b,c in
@@ -44,18 +56,22 @@ class JSONpumpParser{
         return task
     }
     
-    func readJSONobject(object: [String: AnyObject]) { //break into smaller dictionaries
-        //print(object)
-        //guard let pumpNumber = object["name"] as? String else { print("error"); return }
-        //print(object["objects"]!["created"])
+    func readJSONobject(object: [String: AnyObject]) -> [Pump] { //break into smaller dictionaries
+        
+        var pumplist: [Pump] = []
+        
         let newobject = object["objects"] as! [[String: AnyObject]]
+        
         for pumps in newobject {
-            print(pumps["name"])
-            print(pumps["external_id"])
-            print(pumps["number"])
-            print("\n")
+            let tempPump = Pump(pump_name: String(pumps["name"]), pump_number: String(pumps["number"]!), pump_is_occupied: Bool(pumps["is_synced"]! as! NSNumber))
+            pumplist.append(tempPump)
         }
-        //print(newobject[0])
+        
+        //pump name: string
+        //pump enabled: bool
+        //is_synced: bool (what is this?) //we will interpret this as whether the pump is in use or not
+        
+        return pumplist
     }
     
 }
