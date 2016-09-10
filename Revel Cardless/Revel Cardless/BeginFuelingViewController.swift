@@ -29,37 +29,47 @@ class BeginFuelingViewController: UIViewController {
             
             print("ok im ready to buy some gas!")
             
-            mainLabel.text = "5.2 gallons of regular will run you: 17.88!"
+            mainLabel.text = "Please Wait!"
             mainLabel.adjustsFontSizeToFitWidth = true
-            smallLabel.text = "Waiting on attendent to authorize your pump!"
+            smallLabel.text = "Authorizing transaction!"
             smallLabel.adjustsFontSizeToFitWidth = true
             activityViewIndicator.startAnimating()
         }
+        let t1 = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 5 * Int64(NSEC_PER_SEC))
         
-        if totalData.prepareDataForValidation()
-        {
-            print("ok the data is ready to roll!")
-            //mainLabel.text = "Five gallons of regular will run you: "
-            let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 10 * Int64(NSEC_PER_SEC))
-            dispatch_after(time, dispatch_get_main_queue()) {
-                //put your code which should be executed with a delay here
-                self.smallLabel.text = "Finalizing transaction!"
+         dispatch_after(t1, dispatch_get_main_queue()) {
+            
+            if totalData.prepareDataForValidation()
+            {
+                
+                //self.mainLabel.text = "S!"
+                self.mainLabel.adjustsFontSizeToFitWidth = true
+                self.smallLabel.text = "Waiting on attendent to authorize your pump!"
+                self.smallLabel.adjustsFontSizeToFitWidth = true
                 self.activityViewIndicator.startAnimating()
-                if totalData.prepareDataForSale(){
-                    dispatch_after(time, dispatch_get_main_queue()) {
-                        self.smallLabel.text = "Transaction Complete!"
-                        self.activityViewIndicator.stopAnimating()
-                        self.activityViewIndicator.hidesWhenStopped = true
-                        //self.updateRewards()
-                         dispatch_after(time, dispatch_get_main_queue()) {
-                            self.updateRewards()
+
+                //mainLabel.text = "Five gallons of regular will run you: "
+                let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 10 * Int64(NSEC_PER_SEC))
+                dispatch_after(time, dispatch_get_main_queue()) {
+                    //put your code which should be executed with a delay here
+                    self.smallLabel.text = "Finalizing transaction!"
+                    self.activityViewIndicator.startAnimating()
+                    if totalData.prepareDataForSale(){
+                        dispatch_after(time, dispatch_get_main_queue()) {
+                            self.mainLabel.text = "5.2 gallons of regular was $17.88 today!"
+                            self.smallLabel.text = "Transaction Complete!"
+                            self.activityViewIndicator.stopAnimating()
+                            self.activityViewIndicator.hidesWhenStopped = true
+                            //self.updateRewards()
+                             dispatch_after(time, dispatch_get_main_queue()) {
+                                self.updateRewards()
+                            }
                         }
                     }
                 }
+                
             }
-            
         }
-        
         
         
         // Do any additional setup after loading the view.
@@ -77,6 +87,11 @@ class BeginFuelingViewController: UIViewController {
     @IBAction func seekAssistance(sender: AnyObject) {
         alertShow("Notified", message: "Please wait for the Attendent!")
     }
+    
+    
+    @IBAction func donePressed(sender: AnyObject) {
+        alertShow("Notified", message: "Please wait for the Attendent!")
+    }
     func performSegue(segueName: String){
         let vc: UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier(segueName)
         
@@ -88,7 +103,7 @@ class BeginFuelingViewController: UIViewController {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel){(action)-> Void in
-            print("oka")
+            self.performSegue(Constants.Segues.distanceToStore)
             
             
         }

@@ -995,6 +995,7 @@
                                 </state>
                                 <connections>
                                     <action selector="beginFueling:" destination="Lpe-wm-uJH" eventType="touchUpInside" id="0ua-HE-odn"/>
+                                    <action selector="donePressed:" destination="0Kq-hy-Bd4" eventType="touchUpInside" id="rAB-I6-cO5"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ZG0-YD-0A0">
@@ -1108,7 +1109,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Payment Method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4z-7X-rdc">
-                                <rect key="frame" x="0.0" y="30" width="600" height="100"/>
+                                <rect key="frame" x="60" y="30" width="540" height="100"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="ttU-qd-oA0"/>
@@ -1196,7 +1197,7 @@
                             <constraint firstAttribute="trailing" secondItem="s4z-7X-rdc" secondAttribute="trailing" id="Gjz-8t-txy"/>
                             <constraint firstItem="DF7-WX-lvC" firstAttribute="width" secondItem="EyK-Kx-5dF" secondAttribute="width" id="Nkd-e4-5rS"/>
                             <constraint firstAttribute="trailing" secondItem="hyM-cx-c6S" secondAttribute="trailing" id="Nla-FU-CCk"/>
-                            <constraint firstItem="s4z-7X-rdc" firstAttribute="leading" secondItem="EyK-Kx-5dF" secondAttribute="leading" id="P7x-lX-cfe"/>
+                            <constraint firstItem="s4z-7X-rdc" firstAttribute="leading" secondItem="EyK-Kx-5dF" secondAttribute="leading" constant="60" id="P7x-lX-cfe"/>
                             <constraint firstItem="s4z-7X-rdc" firstAttribute="top" secondItem="7Yr-t5-BO4" secondAttribute="bottom" id="aAA-SJ-lEZ"/>
                             <constraint firstItem="DF7-WX-lvC" firstAttribute="centerX" secondItem="EyK-Kx-5dF" secondAttribute="centerX" id="cyN-pD-YeY"/>
                             <constraint firstAttribute="bottom" secondItem="DF7-WX-lvC" secondAttribute="bottom" id="gin-OU-aHy"/>
@@ -1327,7 +1328,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>

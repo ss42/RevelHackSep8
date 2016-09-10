@@ -97,6 +97,7 @@ class ChooseFuelViewController: UIViewController {
         tenPressed.backgroundColor = UIColor.clearColor()
         thirtyPressed.backgroundColor = UIColor.clearColor()
         fortyPressed.backgroundColor = UIColor.clearColor()
+        openTabPressed.backgroundColor = UIColor.darkGrayColor()
     }
     
     
